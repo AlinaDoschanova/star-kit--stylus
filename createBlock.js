@@ -34,7 +34,7 @@ if(blockName) {
 
         if (extention === 'styl') {
           fileContent = `// В этом файле должны быть стили для БЭМ-блока ${blockName}, его элементов, \n// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...\n// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority\n\n.${blockName}\n`;
-          let styleFileImport = '@import \'' + dirPath + blockName + '\';';
+          let styleFileImport = '@import \'../blocks/' + blockName + '/' + blockName + '\';';
 
           // Читаем файл диспетчера подключений
           let connectManager = fs.readFileSync(styleManagerPath, 'utf8');
